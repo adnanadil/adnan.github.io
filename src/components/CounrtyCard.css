@@ -1,0 +1,12 @@
+.Card{
+    border-style: dotted;
+}
+
+.countryName{
+    font-weight: bold;
+}
+
+.date{
+    font-style: italic;
+    font-size: 10px;
+}

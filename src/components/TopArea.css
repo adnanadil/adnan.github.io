@@ -1,0 +1,30 @@
+.topArea {
+    overflow: hidden;
+    position: fixed; /* Set the navbar to fixed position */
+    width: 100%; /* Full width */
+    z-index: 100;
+    padding: 0px 0 0px 0;
+    background-color: white;
+    display: grid;
+    grid-row: auto auto auto;
+    justify-items: center;
+    height: 200px;
+  }
+
+  
+  @media only screen and (max-width: 600px) {
+    .topArea h1{
+        font-size: 25px;
+    }
+    
+  }
+
+
+
+.active:focus { color: red; }
+
+.active:focus-within { color: red; }
+
+.active:active{
+    color: yellow;
+}
