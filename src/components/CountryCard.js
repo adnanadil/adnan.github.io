@@ -6,7 +6,7 @@ const CounrtyCard = (props) => {
     {if (props.sorted){
         return(
             <div className = "Card">
-                <img src = {props.link}/>
+                <img src = {props.link} alt=""/>
                 <p className = "countryName">{props.countryName}</p>
                 <p className = "casesToday">{`New Confirmed Cases: ${props.casesToday}`}</p>
                 <p className = "totalCase">{`Total Confirmed Cases: ${props.totalCase}`}</p>
@@ -18,7 +18,7 @@ const CounrtyCard = (props) => {
     }else {
         return(
             <div className = "Card">
-                <img src = {props.link}/>
+                <img src = {props.link} alt=""/>
                 <p className = "countryName">{props.countryName}</p>
                 <p className = "casesToday">{`New Confirmed Cases: ${props.casesToday}`}</p>
                 <p className = "totalCase">{`Total Confirmed Cases: ${props.totalCase}`}</p>

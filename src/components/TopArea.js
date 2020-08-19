@@ -1,5 +1,4 @@
 import React from 'react'
-import SearchBox from './SearchBox'
 import './TopArea.css'
 
 function TopArea ({onSearchFunction, onClick1, onClick2}) {
@@ -12,9 +11,7 @@ function TopArea ({onSearchFunction, onClick1, onClick2}) {
             </div>
      */
 
-    {
-       
-
+   
         return(
             <div className = "topArea">
                 <p>Covid-19 Cases</p>
@@ -25,7 +22,7 @@ function TopArea ({onSearchFunction, onClick1, onClick2}) {
                 
             </div>
         );
-    }
+    
     
     
 }

@@ -1,7 +1,6 @@
 import React from 'react';
 import './App.css';
 import CountryCardHolder from '../components/CountryCardHolder';
-import SearchBox from '../components/SearchBox';
 import TopArea from '../components/TopArea';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Dropdown from 'react-bootstrap/Dropdown'
