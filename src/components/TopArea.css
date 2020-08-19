@@ -30,10 +30,19 @@ label{
       grid-template-columns: auto auto auto;
     }
     .topArea p{
-        font-size: 25px;
+        font-size: 15px;
         padding: 0px 0px 0px 20px;
         margin: 0px;
-    }
+    }.searchBox{
+      font-size: 0.75em;
+      color:green;
+      font-weight: bold;
+      width:auto;
+      height:30px;
+      border-radius: 5px; 
+      margin: 0px 20px 0px 20px;
+      place-self: center stretch;
+  }
     
   }
 
