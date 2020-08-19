@@ -1,5 +1,10 @@
 .Card{
-    border-style: dotted;
+    align-self: center;
+    animation-name: slideInFromDown;
+    animation-duration: 1s;
+    background-color: #d9d9d9;
+    background-image: linear-gradient(315deg, #d9d9d9 0%, #f6f2f2 74%);
+    border-radius: 15px;  
 }
 
 .countryName{
@@ -10,3 +15,17 @@
     font-style: italic;
     font-size: 10px;
 }
+
+@keyframes example {
+    from {background-color: red;}
+    to {background-color: yellow;}
+  }
+
+  @keyframes slideInFromDown {
+    0% {
+      transform: translateY(100%);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }

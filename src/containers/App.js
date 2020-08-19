@@ -3,6 +3,11 @@ import './App.css';
 import CountryCardHolder from '../components/CountryCardHolder';
 import SearchBox from '../components/SearchBox';
 import TopArea from '../components/TopArea';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Dropdown from 'react-bootstrap/Dropdown'
+import DropdownButton from 'react-bootstrap/DropdownButton'
+
+
 
 class App extends React.Component {
   
@@ -94,8 +99,16 @@ class App extends React.Component {
     
     if (this.state.countriesArray === undefined){
       return(
-        <div>
-          <h1>Loading...</h1>
+        <div className="App">
+          <TopArea
+            onSearchFunction = {this.onSearch}
+            onClick1 = {this.onClickHighestOverall}
+            onClick2 = {this.onClickHigestDaily}
+          ></TopArea>
+
+          <div className ="main">
+            <div class="lds-grid"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+          </div>
         </div>
       );
     }
@@ -103,11 +116,27 @@ class App extends React.Component {
 
       return (
         <div className="App">
+
+      
           <TopArea
             onSearchFunction = {this.onSearch}
             onClick1 = {this.onClickHighestOverall}
             onClick2 = {this.onClickHigestDaily}
           ></TopArea>
+
+          <div className = "dropDownDiv">
+            <DropdownButton
+                  className = "dropDownButt"
+                  alignRight
+                  title="Sort By"
+                  id="dropdown-menu-align-left"
+            >
+              <Dropdown.Item onSelect={this.onClickHigestDaily}>Highest Daily</Dropdown.Item>
+              <Dropdown.Item onSelect={this.onClickHighestOverall}>Overall Cases</Dropdown.Item>
+            </DropdownButton>
+          </div>
+            
+
           <CountryCardHolder
             dataRecieved = {this.state.countriesArray}
             sorted = {this.state.sorted}

@@ -1,7 +1,9 @@
 .countryCardHolder {
     display: grid;
     grid-template-columns: auto auto auto auto;
-    padding: 200px 0 0 0;
+    padding: 0px 20px 0 20px;
+    column-gap: 10px;
+    row-gap: 10px;
 }
 
 .text {
