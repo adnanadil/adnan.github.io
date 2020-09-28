@@ -13,7 +13,7 @@ const CounrtyCard = (props) => {
                     <p className = "totalCase">{`Total Confirmed Cases: ${props.totalCase}`}</p>
                     <p className = "TotalDeaths">{`Total Deaths: ${props.TotalDeaths}`}</p>
                     <p className = "date">{`Updated: ${props.date}`}</p>
-                    <p className = "rank">{`rank: ${props.rank}`}</p>
+                    <p className = "rank:">{`rank: ${props.rank}`}</p>
                 </div>
             );
         }else {
