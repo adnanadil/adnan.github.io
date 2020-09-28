@@ -66,6 +66,7 @@ class App extends React.Component {
     
     this.setState({countriesArray: searchedCounrtyArray})
     this.setState({sorted: false})
+    // hi
     //console.log(`hello brother: ${searchedCounrtyArray}`)
     
   }
