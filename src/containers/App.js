@@ -19,6 +19,8 @@ class App extends React.Component {
     this.state = {searched: ''}
     this.state = {done: false}
     this.state = {sorted: false}
+    this.state = {sortingDone: false}
+    this.state = {dictonaryWithCountryAndRank: {}}
   }
 
   componentDidMount(){
@@ -65,9 +67,12 @@ class App extends React.Component {
     })
     
     this.setState({countriesArray: searchedCounrtyArray})
-    this.setState({sorted: false})
-    // hi
-    //console.log(`hello brother: ${searchedCounrtyArray}`)
+    if (this.state.sortingDone){
+      this.setState({sorted: true})
+    }else {
+      this.setState({sorted: false})
+    }
+    //console.log(`hello brother: ${searchedCounrtyArray}`)    
     
   }
 
@@ -80,6 +85,21 @@ class App extends React.Component {
     this.setState({countriesArray: totalCases})
     this.setState({sorted: true})
 
+    // Working on ranking
+    var dict = []; 
+
+    totalCases.forEach ((country, rank) => {
+      dict.push({
+        key:   country["Country"],
+        value: rank + 1
+        })
+      });
+
+      let dictionary = Object.assign({}, ...dict.map((x) => ({[x.key]: x.value})));
+
+      this.setState({dictonaryWithCountryAndRank : dictionary})  
+      this.setState({sortingDone: true})
+
    
   }
 
@@ -91,6 +111,23 @@ class App extends React.Component {
 
     this.setState({countriesArray: totalCases})
     this.setState({sorted: true})
+
+
+    // Working on ranking
+    var dict = []; 
+
+    totalCases.forEach ((country, rank) => {
+      dict.push({
+        key:   country["Country"],
+        value: rank + 1
+        })
+      });
+
+      let dictionary = Object.assign({}, ...dict.map((x) => ({[x.key]: x.value})));
+
+      this.setState({dictonaryWithCountryAndRank : dictionary})  
+
+      this.setState({sortingDone: true})
 
    
   }
@@ -107,7 +144,7 @@ class App extends React.Component {
           ></TopArea>
 
           <div className ="main">
-            <div class="lds-grid"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+            <div className="lds-grid"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
           </div>
         </div>
       );
@@ -140,6 +177,7 @@ class App extends React.Component {
           <CountryCardHolder
             dataRecieved = {this.state.countriesArray}
             sorted = {this.state.sorted}
+            rankedDictonary = {this.state.dictonaryWithCountryAndRank}
           >
           </CountryCardHolder>
         </div>
