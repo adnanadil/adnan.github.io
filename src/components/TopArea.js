@@ -17,7 +17,7 @@ function TopArea ({onSearchFunction, onClick1, onClick2}) {
                 <p>Covid-19 Cases</p>
                 <div></div>
                 <input 
-                 className ="searchBox" placeholder="Search Country..." onChange={onSearchFunction} />
+                 className ="searchBox" placeholder="Search Country.." onChange={onSearchFunction} />
                 
                 
             </div>
